@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sender with Node.js</title>
+</head>
+<body>
+    <h1>Enter the details below:</h1>
+    <form action="/" method="POST">
+        <input type="text" name="Name" placeholder="Your Name"><br>
+        <input type="text" name="msg" id="" placeholder="Your Message"><br>
+        <input type="email" id="to" name="email" placeholder="Receiever's email"><br>
+        
+        <button type="submit" id="send_email">Send</button>
+    </form>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	var from,to,subject,text;
+	$("#send_email").click(function(){		
+		to=$("#to").val();		
+		$("#message").text("Sending E-mail...Please wait");
+		$.get("http://localhost:3000/send",{to:to},function(data){
+		if(data=="sent")
+		{
+			$("#message").empty().html("<p>Email is been sent at "+to+" . Please check inbox !</p>");
+		}
+
+});
+	});
+});
+$(document).ready(function(){
+	var from,to,subject,text;
+	$("#send_email").click(function(){		
+		to=$("#msg").val();		
+		$("#message").text("Sending E-mail...Please wait");
+		$.get("http://localhost:3000/send",{to:to})
+        // function(data){
+		// if(data=="sent")
+		// {
+		// 	$("#message").empty().html("<p>Email is been sent at "+to+" . Please check inbox !</p>");
+		// }
+
+        });
+	});
+// });
+</script>
+</html>
