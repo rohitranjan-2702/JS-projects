@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=,typography,aspect-ratio"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
+      <!-- Custom CSS -->
+      <style type="text/tailwindcss">
+        h1{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <title>Base Change App</title>
+</head>
+
+<!-- -->
+<!--  -->
+
+
+<body>
+    
+    <h1>Base Change APP</h1>
+    <p id="para1">Change decimal to<span style="color: rgb(255, 0, 0)"> binary</span>
+        <span style="color: rgb(39, 190, 9)"></span>,
+        <span style="color: rgb(65, 94, 226)"> octal</span> and
+        <span style="color: rgb(234, 0, 255)"> hexadecimal</span>.</p>
+<div>
+    <form action="">
+        <label for="numInput">Enter the number :</label>
+        <input class="" type="text" id="numInput" name="numInput"><br><br>
+        <label for="base" id="">Enter the base :</label>
+        
+            <select name="base" id="base" class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+                <option value="2">BINARY: 2</option>
+                <option value="8">OCTAL: 8</option>
+                <option value="16">HEXADECIMAL: 16</option>
+            </select>
+    </form>
+    <button class="btn" id="convert">Convert</button>
+</div>
+</body>
+<script src="/app.js"></script>
+</html>
