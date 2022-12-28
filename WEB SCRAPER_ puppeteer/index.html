@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    <!-- <embed src="./hult prize.pdf" width="800px" height="2100px" /> -->
+    <!-- <iframe src="https://docs.google.com/gview?url=https://www.heritageit.edu/NoticePDF/1208584984Not211122.pdf&embedded=true" style="width:600px; height:500px;" frameborder="0"></iframe> -->
+    <!-- https://drive.google.com/file/d/1GF9ltztrMWLTqQ44u2o3ycglBVuYR25I/view?usp=share_link -->
+    <script>
+//         const options = {
+// 	method: 'POST',
+// 	headers: {
+// 		'content-type': 'application/json',
+// 		'X-RapidAPI-Key': '6a23827c77msh5c2e69197ea2ce3p130d92jsnadc3023576d3',
+// 		'X-RapidAPI-Host': 'linkedin-company-data.p.rapidapi.com'
+// 	},
+// 	body: '{"company_id":"evoqua-water-technologies","per_page":50,"offset":0}'
+// };
+
+function getData(){
+fetch('https://api.dictionaryapi.dev/api/v2/entries/en/sing')
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+}
+
+getData();
+    </script>
+</body>
+</html>

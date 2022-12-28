@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "puppeteer": "^19.2.2"
+  },
+  "name": "puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
